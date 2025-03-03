@@ -1,0 +1,377 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    margin-right: 10px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.address-container {
+    color: white;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.deliver-to {
+    display: flex;
+    align-items: center;
+}
+
+.deliver-to i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+.deliver-to span {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-container {
+    flex: 1;
+    display: flex;
+    height: 40px;
+    margin: 0 10px;
+    max-width: 800px;
+}
+
+#search-category {
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    padding: 0 5px;
+}
+
+#search-input {
+    flex: 1;
+    border: none;
+    padding: 0 10px;
+    outline: none;
+}
+
+#search-button {
+    background-color: #febd69;
+    border: none;
+    width: 45px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.account-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.nav-item span {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+#cart-count {
+    position: relative;
+    top: -10px;
+    left: -15px;
+    background-color: #febd69;
+    color: #131921;
+    border-radius: 50%;
+    padding: 0 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Sub Navigation Styles */
+.sub-nav {
+    background-color: #232f3e;
+    color: white;
+    padding: 8px 20px;
+}
+
+.sub-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sub-nav li {
+    margin-right: 15px;
+}
+
+.sub-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #232f3e, #37475a);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #febd69;
+    color: #131921;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f3a847;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.featured-categories {
+    margin-bottom: 40px;
+}
+
+.featured-categories h2, .product-grid h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Product Grid */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    height: 3em;
+    overflow: hidden;
+}
+
+.product-rating {
+    color: #febd69;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: #febd69;
+    color: #131921;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #f3a847;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #232f3e;
+    color: white;
+}
+
+.back-to-top {
+    background-color: #37475a;
+    padding: 15px;
+    text-align: center;
+}
+
+.back-to-top a {
+    color: white;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #131921;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo-container, .address-container, .search-container, .account-nav {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .search-container {
+        order: -1;
+    }
+    
+    .account-nav {
+        justify-content: space-between;
+    }
+    
+    .sub-nav ul {
+        flex-direction: column;
+    }
+    
+    .sub-nav li {
+        margin-bottom: 5px;
+    }
+    
+    .category-grid, .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+}

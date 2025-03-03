@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Amazin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">amazin</a>
+        </div>
+        
+        <div class="address-container">
+            <div class="deliver-to">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>
+                    <small>Deliver to</small>
+                    <strong>Your Location</strong>
+                </span>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <select id="search-category">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="clothing">Clothing</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Search Amazin">
+            <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="account-nav">
+            <div class="nav-item">
+                <span>
+                    <small>Hello, Sign in</small>
+                    <strong>Account & Lists</strong>
+                </span>
+            </div>
+            
+            <div class="nav-item">
+                <span>
+                    <small>Returns</small>
+                    <strong>& Orders</strong>
+                </span>
+            </div>
+            
+            <div class="nav-item cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+                <strong>Cart</strong>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="#"><i class="fas fa-bars"></i> All</a></li>
+            <li><a href="#">Today's Deals</a></li>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Registry</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Sell</a></li>
+        </ul>
+    </nav>
+    
+    <main class="product-detail-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt;
+            <a href="#">Electronics</a> &gt;
+            <span>Wireless Headphones</span>
+        </div>
+        
+        <div class="product-detail">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="/api/placeholder/500/500" alt="Product Image" id="main-product-image">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('/api/placeholder/500/500')">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('/api/placeholder/500/500')">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('/api/placeholder/500/500')">
+                    <img src="/api/placeholder/80/80" alt="Thumbnail 4" class="thumbnail" onclick="changeImage('/api/placeholder/500/500')">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 id="product-title">Wireless Bluetooth Headphones with Noise Cancellation</h1>
+                
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#reviews">2,345 ratings</a>
+                </div>
+                
+                <div class="product-price">
+                    <span class="price-label">Price:</span>
+                    <span class="current-price">$49.99</span>
+                    <span class="original-price">$69.99</span>
+                    <span class="discount">Save 28%</span>
+                </div>
+                
+                <div class="product-availability">
+                    In Stock.
+                </div>
+                
+                <div class="product-description">
+                    <h3>About this item</h3>
+                    <ul>
+                        <li>Bluetooth 5.0 technology for stable connection up to 33ft (10m)</li>
+                        <li>Active Noise Cancellation reduces ambient noise by up to 90%</li>
+                        <li>Up to 30 hours of playtime on a single charge</li>
+                        <li>Built-in microphone for hands-free calling</li>
+                        <li>Comfortable over-ear design with premium protein leather earpads</li>
+                        <li>Quick charge: 10 minutes of charging gives 3 hours of playtime</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-purchase">
+                <div class="purchase-price">$49.99</div>
+                <div class="delivery-info">
+                    <i class="fas fa-check"></i> <strong>FREE delivery:</strong> Tomorrow
+                    <br>
+                    <i class="fas fa-map-marker-alt"></i> <a href="#">Deliver to Your Location</a>
+                </div>
+                
+                <div class="stock-info">In Stock.</div>
+                
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <select id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="buy-now-btn">Buy Now</button>
+                
+                <div class="secure-transaction">
+                    <i class="fas fa-lock"></i> Secure transaction
+                </div>
+                
+                <div class="ships-from">
+                    Ships from: Amazin.com
+                    <br>
+                    Sold by: Amazin.com
+                </div>
+                
+                <div class="return-policy">
+                    Return Policy: Returnable until 30 days after receipt
+                </div>
+            </div>
+        </div>
+        
+        <section class="product-details-tabs">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab(event, 'description')">Description</button>
+                <button class="tab-btn" onclick="openTab(event, 'specifications')">Specifications</button>
+                <button class="tab-btn" onclick="openTab(event, 'reviews')">Customer Reviews</button>
+            </div>
+            
+            <div id="description" class="tab-content active">
+                <h2>Product Description</h2>
+                <p>Experience premium sound quality with our Wireless Bluetooth Headphones. Designed for comfort and convenience, these headphones feature the latest Bluetooth 5.0 technology for a stable connection and Active Noise Cancellation to block out unwanted noise.</p>
+                
+                <p>With up to 30 hours of playtime, you can enjoy your favorite music all day long without worrying about battery life. The built-in microphone allows for hands-free calling, making these headphones perfect for work and play.</p>
+                
+                <h3>Advanced Features</h3>
+                <p>The advanced Active Noise Cancellation (ANC) technology uses external microphones to detect ambient noise and generates inverse sound waves to cancel it out. This gives you an immersive listening experience, even in noisy environments.</p>
+                
+                <p>Quick charging capability means you'll never be without your music for long. Just 10 minutes of charging gives you 3 hours of playtime, and a full charge provides up to 30 hours of continuous playback.</p>
+                
+                <h3>Comfort & Design</h3>
+                <p>Designed with comfort in mind, these headphones feature soft protein leather earpads and an adjustable headband for a perfect fit. The lightweight design makes them comfortable to wear for extended periods, whether you're commuting, working, or relaxing.</p>
+            </div>
+            
+            <div id="specifications" class="tab-content">
+                <h2>Technical Specifications</h2>
+                <table class="specs-table">
+                    <tr>
+                        <td class="spec-name">Brand</td>
+                        <td class="spec-value">Amazin Audio</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Model</td>
+                        <td class="spec-value">AA-BT500</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Connectivity</td>
+                        <td class="spec-value">Bluetooth 5.0, 3.5mm Audio Jack</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Battery Life</td>
+                        <td class="spec-value">Up to 30 hours</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Charging Time</td>
+                        <td class="spec-value">2 hours for full charge</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Quick Charge</td>
+                        <td class="spec-value">10 minutes for 3 hours playback</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Frequency Response</td>
+                        <td class="spec-value">20Hz - 20kHz</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Impedance</td>
+                        <td class="spec-value">32 Ohm</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Driver Size</td>
+                        <td class="spec-value">40mm</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Noise Cancellation</td>
+                        <td class="spec-value">Active (ANC), up to 90% reduction</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Weight</td>
+                        <td class="spec-value">250g (8.8oz)</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Controls</td>
+                        <td class="spec-value">Touch controls on ear cups</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Microphone</td>
+                        <td class="spec-value">Built-in with noise reduction</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Water Resistance</td>
+                        <td class="spec-value">IPX4 (sweat and splash resistant)</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-name">Warranty</td>
+                        <td class="spec-value">1 year limited warranty</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="reviews" class="tab-content">
+                <h2 id="customer-reviews">Customer Reviews</h2>
+                <div class="reviews-summary">
+                    <div class="overall-rating">
+                        <div class="rating-number">4.5</div>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-count">2,345 ratings</div>
+                    </div>
+                    
+                    <div class="rating-breakdown">
+                        <div class="rating-bar">
+                            <span class="rating-label">5 Star</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 70%"></div>
+                            </div>
+                            <span class="rating-percent">70%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">4 Star</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 20%"></div>
+                            </div>
+                            <span class="rating-percent">20%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">3 Star</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 5%"></div>
+                            </div>
+                            <span class="rating-percent">5%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">2 Star</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 3%"></div>
+                            </div>
+                            <span class="rating-percent">3%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="rating-label">1 Star</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 2%"></div>
+                            </div>
+                            <span class="rating-percent">2%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="customer-reviews-list">
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="reviewer-name">John D.</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-title">Outstanding quality for the price!</div>
+                        <div class="review-date">Reviewed on March 1, 2025</div>
+                        <div class="review-content">
+                            <p>I've tried many headphones in this price range, and these are by far the best. The noise cancellation is excellent, and the sound quality is comparable to headphones twice the price. Battery life is impressive - I've been using them for a week of commuting (about 2 hours per day) and haven't had to charge them yet.</p>
+                        </div>
+                        <div class="review-helpful">
+                            <span>128 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                    
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="reviewer-name">Sarah M.</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-title">Great headphones, minor comfort issues</div>
+                        <div class="review-date">Reviewed on February 22, 2025</div>
+                        <div class="review-content">
+                            <p>The sound quality and noise cancellation are excellent for the price. My only complaint is that after wearing them for more than 2 hours, they start to feel a bit tight on my head. If you have a larger head size, you might find these a bit uncomfortable for extended use. Otherwise, they're a great value.</p>
+                        </div>
+                        <div class="review-helpful">
+                            <span>75 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                    
+                    <div class="review">
+                        <div class="review-header">
+                            <div class="reviewer-name">Michael T.</div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-title">Perfect for work-from-home</div>
+                        <div class="review-date">Reviewed on February 15, 2025</div>
+                        <div class="review-content">
+                            <p>I bought these for Zoom calls while working from home, and they're fantastic. The microphone quality is excellent, and the noise cancellation helps me focus in my noisy household. The battery life is as advertised - I can go multiple days without charging. Highly recommend for anyone who needs headphones for work or study.</p>
+                        </div>
+                        <div class="review-helpful">
+                            <span>94 people found this helpful</span>
+                            <button class="helpful-btn">Helpful</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="see-all-reviews">
+                    <a href="#" class="see-all-btn">See all 2,345 reviews</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="related-products">
+            <h2>Customers who bought this item also bought</h2>
+            <div class="related-products-slider">
+                <div class="related-product">
+                    <img src="/api/placeholder/200/200" alt="Related Product 1">
+                    <div class="related-product-title">Bluetooth Portable Speaker</div>
+                    <div class="related-product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="rating-count">(1,245)</span>
+                    </div>
+                    <div class="related-product-price">$39.99</div>
+                </div>
+                
+                <div class="related-product">
+                    <img src="/api/placeholder/200/200" alt="Related Product 2">
+                    <div class="related-product-title">Headphone Carrying Case</div>
+                    <div class="related-product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="rating-count">(856)</span>
+                    </div>
+                    <div class="related-product-price">$14.99</div>
+                </div>
+                
+                <div class="related-product">
+                    <img src="/api/placeholder/200/200" alt="Related Product 3">
+                    <div class="related-product-title">Replacement Ear Pads</div>
+                    <div class="related-product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="rating-count">(632)</span>
+                    </div>
+                    <div class="related-product-price">$9.99</div>
+                </div>
+                
+                <div class="related-product">
+                    <img src="/api/placeholder/200/200" alt="Related Product 4">
+                    <div class="related-product-title">Bluetooth Audio Adapter</div>
+                    <div class="related-product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        <span class="rating-count">(487)</span>
+                    </div>
+                    <div class="related-product-price">$19.99</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="back-to-top">
+            <a href="#">Back to top</a>
+        </div>
+        
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="#">Sell on Amazin</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Payment Products</h3>
+                <ul>
+                    <li><a href="#">Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025, Amazin.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+    
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-product-image').src = src;
+        }
+        
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            // Remove 'active' class from all tab buttons
+            const tabBtns = document.getElementsByClassName('tab-btn');
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove('active');
+            }
+            
+            // Show the current tab and add 'active' class to the button
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
